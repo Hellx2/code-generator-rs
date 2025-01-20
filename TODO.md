@@ -1,0 +1,1 @@
+[ ] Rework the system to read generators out of a JSON file, following the design shown in `test.json`

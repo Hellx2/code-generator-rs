@@ -1,0 +1,88 @@
+{
+    "generator_impls": [
+        {
+            "language": "Rust",
+            "generators": [
+                {
+                    "name": "GTK",
+                    "generator": {
+                        "start": "gtk4::",
+                        "end": ".builder()",
+                        "prop_start": ".{}(",
+                        "prop_end": ")",
+                        "default_prop_start": "\"",
+                        "default_prop_end": "\"",
+                        "string_end": ".build()"
+                    }
+                }
+            ]
+        }
+    ],
+    "generators": [
+        {
+            "language": "Independent",
+            "generators": [
+                {
+                    "name": "GTK",
+                    "generators": [
+                        {
+                            "name": "Button",
+                            "args": [
+                                {
+                                    "name": "label",
+                                    "display_name": "label",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "css_classes",
+                                    "display_name": "CSS classes (comma separated)",
+                                    "type": "Vec<String>"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Label",
+                            "args": [
+                                {
+                                    "name": "label",
+                                    "display_name": "label",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "css_classes",
+                                    "display_name": "CSS classes (comma separated)",
+                                    "type": "Vec<String>"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Box",
+                            "args": [
+                                {
+                                    "name": "orientation",
+                                    "display_name": "orientation (horizontal or vertical)",
+                                    "type": "Orientation"
+                                },
+                                {
+                                    "name": "css_classes",
+                                    "display_name": "css_classes",
+                                    "type": "Vec<String>"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Application",
+                            "args": [
+                                {
+                                    "name": "application_id",
+                                    "display_name": "App ID",
+                                    "type": "String"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
