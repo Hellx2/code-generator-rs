@@ -3,10 +3,14 @@ use std::io::{stdin, stdout, Write};
 use crate::string::StringExt;
 
 pub fn parse_css_classes(arg: &str) -> String {
-    arg.split(',')
-        .map(|x| x.trim().replace('"', "").surround('"'))
-        .collect::<Vec<String>>()
-        .join(", ")
+    "[".to_owned()
+        + arg
+            .split(',')
+            .map(|x| x.trim().replace('"', "").surround('"'))
+            .collect::<Vec<String>>()
+            .join(", ")
+            .as_str()
+        + "]"
 }
 pub fn get_args(arg_count: usize, arg_names: &[&str]) -> Vec<String> {
     let mut args = vec![];
